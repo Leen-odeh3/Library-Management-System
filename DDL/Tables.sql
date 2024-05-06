@@ -1,7 +1,7 @@
 CREATE SCHEMA Library;
 
 CREATE TABLE Library.Borrowers (
-    BorrowerID INT IDENTITY(1,1) PRIMARY KEY,
+    BorrowerID INT PRIMARY KEY,
     FirstName NVARCHAR(100) NOT NULL,
     LastName NVARCHAR(100) NOT NULL,
     Email NVARCHAR(255) UNIQUE NOT NULL,
