@@ -10,7 +10,7 @@ CREATE TABLE Library.Borrowers (
 );
 
 CREATE TABLE Library.Books (
-    BookID INT IDENTITY(1,1) PRIMARY KEY,
+    BookID INT PRIMARY KEY,
     Title NVARCHAR(255) NOT NULL,
     Author NVARCHAR(255) NOT NULL,
     ISBN NVARCHAR(20) UNIQUE NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE Library.Books (
 );
 
 CREATE TABLE Library.Genres (
-    GenreID INT IDENTITY(1,1) PRIMARY KEY,
+    GenreID INT PRIMARY KEY,
     Name NVARCHAR(100) NOT NULL
 );
 
@@ -33,7 +33,7 @@ CREATE TABLE Library.BookGenres (
 );
 
 CREATE TABLE Library.Loans (
-    LoanID INT IDENTITY(1,1) PRIMARY KEY,
+    LoanID INT PRIMARY KEY,
     BookID INT NOT NULL,
     BorrowerID INT NOT NULL,
     DateBorrowed DATE NOT NULL,
@@ -42,5 +42,7 @@ CREATE TABLE Library.Loans (
     FOREIGN KEY (BookID) REFERENCES Library.Books(BookID),
     FOREIGN KEY (BorrowerID) REFERENCES Library.Borrowers(BorrowerID)
 );
+
+
 
 
