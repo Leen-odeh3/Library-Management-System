@@ -13,7 +13,7 @@ CREATE TABLE Library.Books (
     BookID INT PRIMARY KEY,
     Title NVARCHAR(255) NOT NULL,
     Author NVARCHAR(255) NOT NULL,
-    ISBN NVARCHAR(20) UNIQUE NOT NULL,
+    ISBN NVARCHAR(70) UNIQUE NOT NULL,
     PublishedDate DATE NOT NULL,
     ShelfLocation NVARCHAR(100) NOT NULL,
     CurrentStatus NVARCHAR(20) CHECK (CurrentStatus IN ('Available', 'Borrowed'))
