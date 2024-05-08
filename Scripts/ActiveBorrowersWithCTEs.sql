@@ -1,3 +1,5 @@
+-- 2. Active Borrowers with CTEs
+
 WITH ActiveLoans AS (
     SELECT 
         LoanID,

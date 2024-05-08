@@ -1,3 +1,4 @@
+-- 6. Database Function - Calculate Overdue Fees
 CREATE OR ALTER FUNCTION fn_CalculateOverdueFees
 (
     @LoanID INT

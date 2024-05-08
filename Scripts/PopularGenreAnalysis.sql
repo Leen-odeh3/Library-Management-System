@@ -1,3 +1,4 @@
+-- 4.Popular Genre Analysis using Joins and Window Functions
 DECLARE @Year INT = 2023;
 DECLARE @Month INT = 12;
 WITH GenreBorrows AS (

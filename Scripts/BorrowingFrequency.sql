@@ -1,3 +1,4 @@
+-- 3. Borrowing Frequency using Window Functions
 WITH BorrowerFrequency AS (
     SELECT
         BorrowerID,
