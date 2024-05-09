@@ -1,5 +1,5 @@
 -- 2. Active Borrowers with CTEs
-
+--  Identify borrowers who've borrowed 2 or more books but haven't returned any using CTEs.
 WITH ActiveLoans AS (
     SELECT 
         LoanID,
