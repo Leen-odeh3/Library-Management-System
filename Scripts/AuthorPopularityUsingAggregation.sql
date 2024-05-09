@@ -1,5 +1,5 @@
 -- 9. Author Popularity using Aggregation
-
+-- Rank authors by the borrowing frequency of their books.
 WITH AuthorFrequency AS (
     SELECT
         b.Author,
