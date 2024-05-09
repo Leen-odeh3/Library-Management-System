@@ -1,10 +1,10 @@
 -- 3. Borrowing Frequency using Window Functions
---  Rank borrowers based on borrowing frequency.
+-- Rank borrowers based on borrowing frequency.
 WITH BorrowerFrequency AS (
     SELECT
         BorrowerID,
         COUNT(*) AS BorrowingFrequency,
-        ROW_NUMBER() OVER (ORDER BY COUNT(*) DESC) AS BorrowerRank
+        DENSE_RANK() OVER (ORDER BY COUNT(*) DESC) AS BorrowerRank
     FROM Library.Loans
     GROUP BY BorrowerID
 )
