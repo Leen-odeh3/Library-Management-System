@@ -5,7 +5,7 @@ WITH OverdueBooks AS (
     SELECT
         BookID,
         BorrowerID,
-	   	DateBorrowed,
+	    	DateBorrowed,
         DueDate,
         DateReturned,
         OverdueDays = DATEDIFF(DAY, DueDate, COALESCE(DateReturned, GETDATE()))
