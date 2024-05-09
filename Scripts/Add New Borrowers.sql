@@ -1,5 +1,5 @@
 -- 5. Stored Procedure
-
+-- Procedure Name: sp_AddNewBorrower
 CREATE OR ALTER PROCEDURE sp_AddNewBorrower
     @FirstName NVARCHAR(50), 
     @LastName NVARCHAR(50), 
