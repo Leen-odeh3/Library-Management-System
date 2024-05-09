@@ -17,25 +17,31 @@ AS BEGIN
     FROM Library.Loans
     WHERE LoanID = @LoanID;
 
-    SET @OverdueDays = DATEDIFF(DAY, @DueDate, COALESCE(@DateReturned, GETDATE()));
-
-    IF @OverdueDays > 0
-    BEGIN
-        IF @OverdueDays <= 30
-        BEGIN
-            SET @OverdueFee = @OverdueDays * 1.00;
-        END
-        ELSE
-        BEGIN
-            SET @OverdueFee = (30 * 1.00) + ((@OverdueDays - 30) * 2.00);
-        END
-    END
-    ELSE
+    IF @DueDate IS NULL
     BEGIN
         SET @OverdueFee = 0.00; 
     END
+    ELSE
+    BEGIN
+        SET @OverdueDays = DATEDIFF(DAY, @DueDate, COALESCE(@DateReturned, GETDATE()));
+
+        IF @OverdueDays > 0
+        BEGIN
+            IF @OverdueDays <= 30
+            BEGIN
+                SET @OverdueFee = @OverdueDays * 1.00;
+            END
+            ELSE
+            BEGIN
+                SET @OverdueFee = (30 * 1.00) + ((@OverdueDays - 30) * 2.00);
+            END
+        END
+        ELSE
+        BEGIN
+            SET @OverdueFee = 0.00; 
+        END
+    END
 
     RETURN @OverdueFee;
-	End
-
+END
 
