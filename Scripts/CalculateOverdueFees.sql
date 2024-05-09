@@ -22,6 +22,7 @@ AS BEGIN
         SET @OverdueFee = 0.00; 
     END
     ELSE
+    
     BEGIN
         SET @OverdueDays = DATEDIFF(DAY, @DueDate, COALESCE(@DateReturned, GETDATE()));
 
