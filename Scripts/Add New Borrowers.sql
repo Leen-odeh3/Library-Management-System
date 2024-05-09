@@ -1,7 +1,7 @@
 -- 5. Stored Procedure
 -- Procedure Name: sp_AddNewBorrower
 
-DROP PROCEDURE IF EXISTS [dbo].[sp_AddNewBorrower];
+DROP PROCEDURE IF EXISTS [sp_AddNewBorrower];
 
 CREATE OR ALTER PROCEDURE sp_AddNewBorrower
     @FirstName NVARCHAR(50), 
