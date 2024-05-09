@@ -1,4 +1,5 @@
 -- 4.Popular Genre Analysis using Joins and Window Functions
+--  Identify the most popular genre for a given month.
 DECLARE @Year INT = 2023;
 DECLARE @Month INT = 12;
 WITH GenreBorrows AS (
