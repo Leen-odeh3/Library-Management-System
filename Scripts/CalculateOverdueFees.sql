@@ -1,4 +1,7 @@
 -- 6. Database Function - Calculate Overdue Fees
+-- Implementation: Charge fees based on overdue days: $1/day for up to 30 days, $2/day after.
+
+
 CREATE OR ALTER FUNCTION fn_CalculateOverdueFees
 (
     @LoanID INT
