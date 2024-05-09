@@ -1,4 +1,5 @@
 -- 8. Overdue Analysis
+--  List all books overdue by more than 30 days with their associated borrowers
 DECLARE @OverdueDays INT = 10;
 WITH OverdueBooks AS (
     SELECT
